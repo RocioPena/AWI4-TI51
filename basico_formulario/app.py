@@ -1,8 +1,7 @@
 import web
 
 urls = (
-    '/', 'Formulario',
-    "/"
+    '/', 'Formulario'
     
 )
 app = web.application(urls, globals())
@@ -10,7 +9,7 @@ render = web.template.render('templates')
 
 class Formulario:
     def GET(self):
-        return render.formulario()
+        return render.formulario_basico()
         
     def POST(self):
         form = web.input()
